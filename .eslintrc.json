@@ -1,0 +1,14 @@
+{
+    "extends": "plugin:prettier/recommended",
+    "rules": {
+      "semi": ["error", "always"],
+      "quotes": ["error", "double"],
+      "prettier/prettier": "error"
+    },
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module"
+    },
+    "plugins": ["prettier"],
+  }
+  
