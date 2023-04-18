@@ -7,8 +7,9 @@
     },
     "parserOptions": {
       "ecmaVersion": 8,
-      "sourceType": "module"
+      "sourceType": "module",
     },
     "plugins": ["prettier"],
+
   }
   

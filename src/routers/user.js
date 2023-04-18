@@ -98,7 +98,9 @@ router.post("/users/login", async (req, res) => {
 
     const token = await user.generateAuthToken();
     res.send({ user, token });
-  } catch (error) {}
+  } catch (error) {
+    res.status(400).send();
+  }
 });
 
 router.post("/users/logout", auth, async (req, res) => {
@@ -157,5 +159,3 @@ router.get("/users/:id/avatar", async (req, res) => {
   }
 });
 module.exports = router;
-
-//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

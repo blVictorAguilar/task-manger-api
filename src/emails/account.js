@@ -12,7 +12,6 @@ const sendRegistrationEmail = async (email, name) => {
       to: email,
       text: `Thank you ${name} for your suscription!!!!`,
     });
-    console.log("Email sent");
   } catch (error) {
     console.error(error);
   }
@@ -26,7 +25,6 @@ const sendCancelationEmail = async (email, name) => {
       to: email,
       text: `Hello ${name} your account has been removed`,
     });
-    console.log("Email sent");
   } catch (error) {
     console.error(error);
   }
