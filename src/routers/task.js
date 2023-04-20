@@ -84,7 +84,6 @@ router.patch("/tasks/:id", auth, async (req, res) => {
     }
     res.send(task);
   } catch (error) {
-    console.log("error: ", error);
     return res.status(500).send();
   }
 });
@@ -94,7 +93,7 @@ router.delete("/tasks/:id", auth, async (req, res) => {
   try {
     const response = await Task.findOneAndDelete({ _id, owner: req.user._id });
     if (!response) {
-      res.status(404).send("no task found");
+      return res.status(404).send("no task found");
     }
     res.status(200).send(response);
   } catch (error) {
