@@ -8,6 +8,7 @@
     "start": "node src/index.js",
     "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
     "format": "eslint --fix .",
+    "eslint:fix": "eslint --fix src/**/*.js",
     "lint": "eslint ."
   },
   "keywords": [],
